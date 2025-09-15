@@ -1,7 +1,18 @@
-function factorial(n){
-    if(n===1)
-        return 1;
-    return n*factorial(n-1)
+let arr=[1,2,3,4,5,6,7,8];
+target=9
+
+for(l=0,r=arr.length-1;l<r;){
+    sum=arr[l]+arr[r];
+    if(sum===target){
+        console.log(arr[l],arr[r])
+        l++;
+        r--;
+        
+    }else if(sum<target){
+        l++;
+    }
+    else{
+        r--;
+
+    }
 }
-let fact=factorial(3)
-console.log(fact)
